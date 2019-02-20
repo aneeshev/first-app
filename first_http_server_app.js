@@ -12,6 +12,12 @@ const server = http.createServer((req, res) => {
         res.write('Customer added..');
         res.end();
     }
+
+    if( req.url === '/api/deleteCustomer'){
+        console.log('Customer deleted..')
+        res.write('Customer deleted..');
+        res.end();
+    }
 })
 
 server.listen(3000);
