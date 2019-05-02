@@ -1,4 +1,5 @@
 var request = require('request');
+var fs = require('fs');
 
 var s = request('http://pluralsight.com/');
 
@@ -16,3 +17,5 @@ s.on('end', function(){
 
 //using pipe() concept.
 request('http://pluralsight.com/').pipe(process.stdout);
+
+request('http://pluralsight.com/').pipe(fs.createWriteStream('pluralsight.html'));

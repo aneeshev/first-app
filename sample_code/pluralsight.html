@@ -1,0 +1,2454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="appRedirectPath" content="/id/dashboard" />
+<meta name="keywords">
+<meta name="description" content="The technology learning platform that provides web development, IT certification and ondemand training that helps your career and your business move forward with the right technology and the right skills. Thousands of online courses for popular programming languages, developer tools and more!">
+<meta property="og:description" content="The technology learning platform that provides web development, IT certification and ondemand training that helps your career and your business move forward with the right technology and the right skills. Thousands of online courses for popular programming languages, developer tools and more!">
+<meta name="twitter:description" content="The technology learning platform that provides web development, IT certification and ondemand training that helps your career and your business move forward with the right technology and the right skills. Thousands of online courses for popular programming languages, developer tools and more!">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@pluralsight" />
+<meta property="og:image" content="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/resource-center/resource-center-default.jpg" />
+<meta name="twitter:image" content="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/resource-center/resource-center-default.jpg" />
+<meta name="robots" content="index, follow">
+<meta name="content-type" content="Page" />
+<meta name="categories" content="page" />
+<link rel="canonical" href="https://www.pluralsight.com" />
+<script data-cfasync="false">window.wcmmodedisabled = true;</script>
+<script data-cfasync="false">
+function getParameterByName(e,o){o||(o=window.location.href),e=e.replace(/[\[\]]/g,"\\$&");var n=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)").exec(o);return n&&n[2]?decodeURIComponent(n[2].replace(/\+/g," ")):""}function changeHistoryQueryParam(e,o,n,t,a){if(history.pushState){var i=""==window.location.search?"?":window.location.search;if(-1!==decodeURIComponent(i).indexOf(e+"=")){var c=getParameterByName(e);if(t)if(n){var d=(p=c.split(",")).indexOf(o);if(-1<d&&p.splice(d,1),0===p.length){var r=new RegExp("&?"+e+"=[^&]*","g");i=i.replace(r,"")}else i=i.replace(e+"="+encodeURIComponent(c),e+"="+encodeURIComponent(p.join(",")))}else{var p=[];c?p=c.split(","):c="",-1===p.indexOf(o)&&(p.push(o),i=i.replace(e+"="+encodeURIComponent(c),e+"="+encodeURIComponent(p.join(","))))}else if(n){r=new RegExp("&?"+e+"=[^&]*","g");i=i.replace(r,"")}else i=i.replace(e+"="+encodeURIComponent(c),e+"="+encodeURIComponent(o))}else n||(i+="?"==i?e+"="+encodeURIComponent(o):"&"+e+"="+encodeURIComponent(o));var m=window.location.protocol+"//"+window.location.host+window.location.pathname+(a?decodeURIComponent(i):i);window.history.pushState({path:m},"",m)}}function dtmEventTrigger(e,o){var n=new CustomEvent(e,{bubbles:!0,cancelable:!1,detail:o});document.querySelector("body").dispatchEvent(n)}var doNotTrack=-1<document.cookie.indexOf("ps_optout=1")||-1<document.URL.indexOf("dnt=true"),oneHour=36e5,trkDate=new Date(Date.now()+oneHour);if(document.cookie="ps_trk="+(doNotTrack?"0":"1")+"; expires="+trkDate.toUTCString()+"; path=/"+(-1<document.URL.indexOf("pluralsight.com")?"; domain=pluralsight.com":""),window.DemandbaseMini={},window.minidbready=function(e){window.DemandbaseMini={IP:{CompanyProfile:e}}},-1<document.cookie.indexOf("ps_trk=1")){var s=document.createElement("script");s.type="text/javascript",s.src="//api.demandbase.com/api/v2/ip.json?key=012bc11d09ef8437662946719f6c82d2&callback=minidbready",document.head.appendChild(s)}
+</script>
+<script data-cfasync="false" src="/etc/clientlibs/pluralsight/main/js/separates/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="/etc/clientlibs/pluralsight/uber.min.2a5dddf27847da1d98e216a5c13b6114.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6966154/7969012/css/fonts.css" />
+<script data-cfasync="false">
+var appHost="www-stage.pluralsight.com"==window.location.host?"https://app-stage.pluralsight.com":"https://app.pluralsight.com",pagePath=window.location.pathname,redirectPath="",appRedirectTag=document.head.querySelector("[name~='appRedirectPath'][content]");if(appRedirectTag&&(redirectPath=appRedirectTag.content.toString()),!window.is404)if(0==pagePath.indexOf("/product/channels")&&(redirectPath="/channels",-1<document.URL.indexOf("cid=")&&(redirectPath="/channels/details/"+getParameterByName("cid"))),-1<document.cookie.indexOf("www-status-production=")&&-1==document.cookie.indexOf("midCheckout")&&"www.pluralsight.com"==window.location.host||-1<document.cookie.indexOf("www-status-staging=")&&-1==document.cookie.indexOf("midCheckout")&&"www-stage.pluralsight.com"==window.location.host){var aidParam=getParameterByName("aid"),vidParam=getParameterByName("vid"),paramsString="";""!==aidParam&&(paramsString+=(paramsString.includes("?")?"&":"?")+"aid="+aidParam),""!==vidParam&&(paramsString+=(paramsString.includes("?")?"&":"?")+"vid="+vidParam),""!=redirectPath&&-1==document.URL.indexOf("show=home")?window.location=appHost+redirectPath+paramsString:jQuery(document).ready(function(){var t=appHost+"/id/dashboard",e=jQuery(".header_sign_up_link");e.text("My Dashboard"),e.attr("href",t),e.attr("title","My Dashboard"),jQuery(".header_sign_in_link").attr("style","display: none !important")})}else 0!=pagePath.indexOf("/customer/")||"www-stage.pluralsight.com"!=window.location.host&&"www.pluralsight.com"!=window.location.host||-1!=document.cookie.indexOf("midCheckout")?""!=redirectPath?jQuery(document).ready(function(){jQuery(".sign_in_link").attr("href",appHost+"/id?redirectTo="+encodeURIComponent(redirectPath))}):jQuery(document).ready(function(){jQuery(".sign_in_link").attr("href",appHost+"/id?")}):window.location=appHost+"/id?redirectTo="+encodeURIComponent(document.URL);
+</script>
+<script data-cfasync="false">
+if(window.loadRemoteScript=function(e,t,i,n,o){var s=document.createElement("script");s.type=t||"text/javascript",s.id=n||null,1==i&&(s.async=i||1),s.readyState?s.onreadystatechange=function(){"loaded"!=s.readyState&&"complete"!=s.readyState||(s.onreadystatechange=null,o())}:s.onload=function(){o()},s.src=("https:"==document.location.protocol?"https://":"http://")+e,document.getElementsByTagName("head")[0].appendChild(s)},-1<document.URL.indexOf("refid=")){var queryEnd=document.URL.split("refid=")[1],refID=queryEnd.split("&")[0],d=new Date;d.setTime(d.getTime()+6048e5),document.cookie="refID="+refID+"; expires="+d.toUTCString()+"; path=/"}if(-1<document.cookie.indexOf("refID=")){refID=jQuery.cookie("refID");jQuery("a[href*='cvent.com']").each(function(){-1==jQuery(this).attr("href").indexOf("refid")&&jQuery(this).attr("href",jQuery(this).attr("href")+"?refid="+refID)})}function setSelectedInterest(e){var t=new Date;t.setTime(t.getTime()+6048e5),document.cookie="ps_si="+e+"; expires="+t.toUTCString()+"; path=/",window.selectedInterest=e}function setSelectedConsumerType(e){var t=new Date;t.setTime(t.getTime()+6048e5),document.cookie="ps_sct="+e+"; expires="+t.toUTCString()+"; path=/",window.selectedConsumerType=e}function setSelectedBusinessType(e){var t=new Date;t.setTime(t.getTime()+6048e5),document.cookie="ps_sbt="+e+"; expires="+t.toUTCString()+"; path=/",window.selectedBusinessType=e}-1<document.cookie.indexOf("ps_si=")&&(window.selectedInterest=document.cookie.split("ps_si=")[1].split(";")[0]),-1<document.cookie.indexOf("ps_sct=")&&(window.selectedConsumerType=document.cookie.split("ps_sct=")[1].split(";")[0]),-1<document.cookie.indexOf("ps_sbt=")&&(window.selectedBusinessType=document.cookie.split("ps_sbt=")[1].split(";")[0]);var inflDate=new Date;inflDate.setTime(inflDate.getTime()+18e5);var visNumDate=new Date;if(visNumDate.setTime(visNumDate.getTime()+31536e6),-1<document.cookie.indexOf("ps_infl")){var infl=document.cookie.split("ps_infl=")[1].split(";")[0];document.cookie="ps_infl="+infl+"; expires="+inflDate.toUTCString()+"; path=/"}else{var visNum=1;-1<document.cookie.indexOf("ps_visNum")&&(visNum=parseInt(document.cookie.split("ps_visNum=")[1].split(";")[0])+1),document.cookie="ps_visNum="+visNum+"; expires="+visNumDate.toUTCString()+"; path=/",getParameterByName("aid")||getParameterByName("vid")||""!=document.referrer&&-1==document.referrer.indexOf("pluralsight.com")?document.cookie="ps_infl=1; expires="+inflDate.toUTCString()+"; path=/":document.cookie="ps_infl=0; expires="+inflDate.toUTCString()+"; path=/"}
+</script>
+<script src="//assets.adobedtm.com/2c5f2b30762ae62377916c09612cd9d60054fba9/satelliteLib-d219ec1f03bb8f042fe31ffc29deb53997d778ef.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/etc/clientlibs/pluralsight/main/images/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/etc/clientlibs/pluralsight/main/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/etc/clientlibs/pluralsight/main/images/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/etc/clientlibs/pluralsight/main/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/etc/clientlibs/pluralsight/main/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/etc/clientlibs/pluralsight/main/images/favicons/manifest.json">
+<link rel="mask-icon" href="/etc/clientlibs/pluralsight/main/images/favicons/safari-pinned-tab.svg" color="#e71585">
+<link rel="shortcut icon" href="/etc/clientlibs/pluralsight/main/images/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#e71585">
+<meta name="msapplication-TileImage" content="/etc/clientlibs/pluralsight/main/images/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="/etc/clientlibs/pluralsight/main/images/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<title>Unlimited Online Developer, IT and Cyber Security Training | Pluralsight</title>
+<meta property="og:title" content="Pluralsight - Unlimited Online Developer, IT,  and Cyber Security Training">
+<meta name="twitter:title" content="Pluralsight - Unlimited Online Developer, IT,  and Cyber Security Training">
+</head>
+<body class="mode-disabled home-template">
+<div class="site-wrap">
+<div class="nav-context ">
+<noindex>
+<header class="header" id="page_header">
+<a href="https://www.pluralsight.com/" class="pluralsight horizontal--logo"><div class="pluralsight-spacing"></div></a>
+<div class="header_browse">
+<div class="header_nav--menu header_nav_courses">
+<a href="#" class="header_nav_primary" tabindex="1">Courses <i class="icons" icon="down-arrow"></i></a>
+<div class="header_dropdown" style="display:none;">
+<div id="header_tabs" class="container-lg">
+<div class="closebutton" tabindex="3">x</div>
+<ul>
+<li class="header_roles software-development header_tabs_link active" data-tab="software-development">
+<a href="https://www.pluralsight.com/browse/software-development">Software Development</a>
+</li>
+<li class="header_roles it-ops header_tabs_link" data-tab="it-ops">
+<a href="https://www.pluralsight.com/browse/it-ops">IT Ops</a>
+</li>
+<li class="header_roles data-professional header_tabs_link" data-tab="data-professional">
+<a href="https://www.pluralsight.com/browse/data-professional">Data Professional</a>
+</li>
+<li class="header_roles info-cybersecurity header_tabs_link" data-tab="info-cybersecurity">
+<a href="https://www.pluralsight.com/browse/information-cyber-security">Information &amp; Cyber Security</a>
+</li>
+<li class="header_roles architecture-construction header_tabs_link" data-tab="browse-all">
+<a>Browse all technologies</a>
+</li>
+</ul>
+<div id="software-development" class="header_tabs_content active">
+<div class="header_tabs_content--container">
+<div class="header_tabs_column">
+<ul class="header_topics_menu">
+<li class="first">Courses</li>
+<li><a href="https://www.pluralsight.com/browse/software-development/python">Python</a></li>
+<li><a href="https://www.pluralsight.com/browse/software-development/javascript">JavaScript</a></li>
+<li><a href="https://www.pluralsight.com/browse/software-development/java">Java</a></li>
+<li><a href="https://www.pluralsight.com/browse/software-development/c-sharp">C#</a></li>
+<li><a href="https://www.pluralsight.com/browse/software-development/web-development">Web Development</a></li>
+<li><a href="https://www.pluralsight.com/browse/software-development/mobile-development">Mobile Development</a></li>
+<li class="last"><a href="https://www.pluralsight.com/browse/software-development">View all courses &gt;</a></li>
+</ul>
+</div>
+<div class="header_tabs_column paths">
+<ul>
+<li class="first">Paths</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/javascript">
+<div class="item-each">
+<div class="item-image"><script type="text/javascript">
+//<![CDATA[
+window.__mirage2 = {petok:"1464ac82e9e9dab58fd84df81903037c36189236-1556793807-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js"></script>
+<img alt="JavaScript" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/javascript-36f5949a45.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="JavaScript" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/javascript-36f5949a45.png?w=60"></noscript></div>
+<div class="item-text">
+JavaScript
+<ul>
+<li><span>9</span> Courses</li>
+<li><span>21</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/angular-js">
+<div class="item-each">
+<div class="item-image"><img alt="AngularJS" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="AngularJS" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png?w=60"></noscript></div>
+<div class="item-text">
+AngularJS
+<ul>
+<li><span>14</span> Courses</li>
+<li><span>55</span> Hours</li>
+</ul>
+</div>
+</div>
+ </a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/java">
+<div class="item-each">
+<div class="item-image"><img alt="Java" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/java-79830005fe.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Java" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/java-79830005fe.png?w=60"></noscript></div>
+<div class="item-text">
+Java
+<ul>
+<li><span>13</span> Courses</li>
+<li><span>48</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/paths">View all paths &gt;</a>
+</li>
+</ul>
+</div>
+<div class="header_tabs_column paths assessments">
+<ul>
+<li class="first">Assessments</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/angular">
+<div class="item-each">
+<div class="item-image"><img alt="Angular" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Angular" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png?w=60"></noscript></div>
+<div class="item-text">
+Angular
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/csharp">
+<div class="item-each">
+<div class="item-image"><img alt="Node.js" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Node.js" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png?w=60"></noscript></div>
+<div class="item-text">
+C#
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/python">
+<div class="item-each">
+<div class="item-image"><img alt="Python" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/python-7be70baaac.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Python" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/python-7be70baaac.png?w=60"></noscript></div>
+<div class="item-text">
+Python
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/pluralsight-iq">View all assessments &gt;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="it-ops" class="header_tabs_content">
+<div class="header_tabs_content--container">
+<div class="header_tabs_column">
+<ul>
+<li class="first">Courses</li>
+<li><a href="https://www.pluralsight.com/browse/it-ops/it-certifications">IT Certifications</a></li>
+<li><a href="https://www.pluralsight.com/browse/it-ops/it-networking">IT Networking</a></li>
+<li><a href="https://www.pluralsight.com/browse/it-ops/security">Security</a></li>
+<li><a href="https://www.pluralsight.com/browse/it-ops/database-administration">Database Administration</a></li>
+<li><a href="https://www.pluralsight.com/browse/it-ops/virtualization">Virtualization</a></li>
+<li><a href="https://www.pluralsight.com/browse/it-ops/servers">Servers</a></li>
+<li class="last"><a href="https://www.pluralsight.com/browse/it-ops">View all courses &gt;</a></li>
+</ul>
+</div>
+<div class="header_tabs_column paths">
+<ul>
+<li class="first">Paths</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/fundamentals-of-it-operations">
+<div class="item-each">
+<div class="item-image"><img alt="Fundamentals of IT Operations" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/fundamentals-of-it-operations-95797723fe.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Fundamentals of IT Operations" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/fundamentals-of-it-operations-95797723fe.png?w=60"></noscript></div>
+<div class="item-text">
+Fundamentals of IT Operations
+<ul>
+<li><span>29</span> Courses</li>
+<li><span>87</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/comptia-a-plus">
+<div class="item-each">
+<div class="item-image"><img alt="CompTIA A+" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/server-admin-windows-9e9af6b278.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="CompTIA A+" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/server-admin-windows-9e9af6b278.png?w=60"></noscript></div>
+<div class="item-text">
+CompTIA A+
+<ul>
+<li><span>11</span> Courses</li>
+<li><span>40</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/comptia-network-n10-007">
+<div class="item-each">
+<div class="item-image"><img alt="CompTIA Network+ (N10-007)" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/networks-d4455e1c98.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="CompTIA Network+ (N10-007)" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/networks-d4455e1c98.png?w=60"></noscript></div>
+<div class="item-text">
+CompTIA Network+
+<ul>
+<li><span>5</span> Courses</li>
+<li><span>16</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/paths">View all paths &gt;</a>
+</li>
+</ul>
+</div>
+<div class="header_tabs_column paths assessments">
+<ul>
+<li class="first">Assessments</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/planning-microsoft-azure-infrastructure">
+<div class="item-each">
+<div class="item-image"><img alt="Planning Microsoft Azure Infrastructure" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/azure-blue-b11372258d.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Planning Microsoft Azure Infrastructure" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/azure-blue-b11372258d.png?w=60"></noscript></div>
+<div class="item-text">
+Planning Microsoft Azure Infrastructure
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/networking-fundamentals">
+<div class="item-each">
+<div class="item-image"><img alt="Networking Fundamentals" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/networks-484b57170b.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Networking Fundamentals" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/networks-484b57170b.png?w=60"></noscript></div>
+<div class="item-text">
+Networking Fundamentals
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/understanding-devops">
+<div class="item-each">
+<div class="item-image"><img alt="Understanding Dev Ops" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/devops-18b91372ed.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Understanding Dev Ops" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/devops-18b91372ed.png?w=60"></noscript></div>
+<div class="item-text">
+Understanding Dev Ops
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/pluralsight-iq">View all assessments &gt;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="data-professional" class="header_tabs_content">
+<div class="header_tabs_content--container">
+<div class="header_tabs_column">
+<ul>
+<li class="first">Courses</li>
+<li><a href="https://www.pluralsight.com/browse/data-professional/big-data">Big Data</a></li>
+<li><a href="https://www.pluralsight.com/browse/data-professional/business-intelligence-data-pro">Business Intelligence</a></li>
+<li><a href="https://www.pluralsight.com/browse/data-professional/sql">SQL</a></li>
+<li><a href="https://www.pluralsight.com/browse/data-professional/tableau">Tableau</a></li>
+<li><a href="https://www.pluralsight.com/browse/data-professional/oracle">Oracle</a></li>
+<li><a href="https://www.pluralsight.com/browse/data-professional/sql-server">SQL Server</a></li>
+<li class="last"><a href="https://www.pluralsight.com/browse/data-professional">View all courses &gt;</a></li>
+</ul>
+</div>
+<div class="header_tabs_column paths">
+<ul>
+<li class="first">Paths</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/the-scrum-framework">
+<div class="item-each">
+<div class="item-image"><img alt="Using the Scrum Framework" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/scrum-a5c44d8364.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Using the Scrum Framework" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/scrum-a5c44d8364.png?w=60"></noscript></div>
+<div class="item-text">
+Using the Scrum Framework
+<ul>
+<li><span>7</span> Courses</li>
+<li><span>13</span> Hours</li>
+</ul>
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/microsoft-azure-for-developers">
+<div class="item-each">
+<div class="item-image"><img alt="Microsoft Azure For Developers" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/group-policy-administration-ee0dacafe8.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Microsoft Azure For Developers" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/group-policy-administration-ee0dacafe8.png?w=60"></noscript></div>
+<div class="item-text">
+Microsoft Azure For Developers
+<ul>
+<li><span>12</span> Courses</li>
+<li><span>35</span> Hours</li>
+</ul>
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/upgrading-your-technology-career">
+<div class="item-each">
+<div class="item-image"><img alt="Upgrading Your Technology Career" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/fundamentals-of-it-operations-95797723fe.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Upgrading Your Technology Career" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/fundamentals-of-it-operations-95797723fe.png?w=60"></noscript></div>
+<div class="item-text">
+Upgrading Your Technology Career
+<ul>
+<li><span>28</span> Courses</li>
+<li><span>51</span> Hours</li>
+</ul>
+</div>
+</div></a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/paths">View all paths &gt;</a>
+</li>
+</ul>
+</div>
+<div class="header_tabs_column paths assessments">
+<ul>
+<li class="first">Assessments</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/csharp">
+<div class="item-each">
+<div class="item-image"><img alt="C#" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="C#" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png?w=60"></noscript></div>
+<div class="item-text">
+C#
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/mysql">
+<div class="item-each">
+<div class="item-image"><img alt="MySQL" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/mysql-e0720d7b98.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="MySQL" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/mysql-e0720d7b98.png?w=60"></noscript></div>
+<div class="item-text">
+MySQL
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/google-android-associate-developer-aad">
+<div class="item-each">
+<div class="item-image"><img alt="Android" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/android-53f8da146d.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Android" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/android-53f8da146d.png?w=60"></noscript></div>
+<div class="item-text">
+Android
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div></a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/pluralsight-iq">View all assessments &gt;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="info-cybersecurity" class="header_tabs_content">
+<div class="header_tabs_content--container">
+<div class="header_tabs_column">
+<ul>
+<li class="first">Courses</li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security">Cyber Security</a></li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security/security-certifications">Security Certifications</a></li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security/penetration-testing">Penetration Testing</a></li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security/security-auditing">Security Auditing</a></li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security/malware-analysis">Malware Analysis</a></li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security/security-fundamentals">Security Fundamentals</a></li>
+<li class="last"><a href="https://www.pluralsight.com/browse/information-cyber-security">View all courses &gt;</a></li>
+</ul>
+</div>
+<div class="header_tabs_column paths">
+<ul>
+<li class="first">Paths</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/incident-handler-ecih-and-gcih-prep">
+<div class="item-each">
+<div class="item-image"><img alt="Incident Handler (ECIH and GCIH Prep)" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-a8fd4b7c89.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Incident Handler (ECIH and GCIH Prep)" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-a8fd4b7c89.png?w=60"></noscript></div>
+<div class="item-text">
+Incident Handler (ECIH and GCIH Prep)
+<ul>
+<li><span>3</span> Courses</li>
+<li><span>12</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/comptia-cybersecurity-analyst-csa-cs0-001">
+<div class="item-each">
+<div class="item-image"><img alt="CySA+ (CompTIA Cybersecurity Analyst) CS0-001" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-a8fd4b7c89.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="CySA+ (CompTIA Cybersecurity Analyst) CS0-001" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-a8fd4b7c89.png?w=60"></noscript></div>
+<div class="item-text">
+CySA+ (CompTIA Cybersecurity Analyst) CS0-001
+<ul>
+<li><span>7</span> Courses</li>
+<li><span>28</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/sscpr-systems-security-certified-practitioner">
+<div class="item-each">
+<div class="item-image"><img alt="SSCP® (Systems Security Certified Practitioner)" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/info-security-5d8ab8e621.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="SSCP® (Systems Security Certified Practitioner)" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/info-security-5d8ab8e621.png?w=60"></noscript></div>
+<div class="item-text">
+SSCP
+<ul>
+<li><span>11</span> Courses</li>
+<li><span>19</span> Hours</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/paths">View all paths &gt;</a>
+</li>
+</ul>
+</div>
+<div class="header_tabs_column paths assessments">
+<ul>
+<li class="first">Assessments</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/security-fundamentals">
+<div class="item-each">
+<div class="item-image"><img alt="Security Fundamentals" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-5d8ab8e621.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Security Fundamentals" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-5d8ab8e621.png?w=60"></noscript></div>
+<div class="item-text">
+Security Fundamentals
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/paths/security-for-hackers-and-developers">
+<div class="item-each">
+<div class="item-image"><img alt="Security for Hackers and Developers" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-5d8ab8e621.png?w=60" style="display:none;visibility:hidden;"><noscript><img alt="Security for Hackers and Developers" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight2.imgix.net/paths/images/comptia-security-plus-5d8ab8e621.png?w=60"></noscript></div>
+<div class="item-text">
+Security for Hackers and Developers
+<ul>
+<li>Get your <span>Skill IQ</span></li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</li>
+<li class="last">
+<a href="https://www.pluralsight.com/product/pluralsight-iq">View all assessments &gt;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="browse-all" class="header_tabs_content">
+<div class="header_tabs_content--container">
+<div class="header_tabs_column paths browse">
+<ul>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/software-development">
+<div class="item-each">
+<div class="item-image"><img alt="Software Development" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/software_development.png" style="display:none;visibility:hidden;"><noscript><img alt="Software Development" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/software_development.png"></noscript></div>
+<div class="item-text">
+Software Development
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/it-ops">
+<div class="item-each">
+<div class="item-image"><img alt="IT Ops" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/it_ops.png" style="display:none;visibility:hidden;"><noscript><img alt="IT Ops" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/it_ops.png"></noscript></div>
+<div class="item-text">
+IT Ops
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/creative-professional">
+<div class="item-each">
+<div class="item-image"><img alt="Creative Professional" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/creative_professional.png" style="display:none;visibility:hidden;"><noscript><img alt="Creative Professional" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/creative_professional.png"></noscript></div>
+<div class="item-text">
+Creative Professional
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/data-professional">
+<div class="item-each">
+<div class="item-image"><img alt="Creative Professional" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/data_professional.png" style="display:none;visibility:hidden;"><noscript><img alt="Creative Professional" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/data_professional.png"></noscript></div>
+<div class="item-text">
+Data Professional
+</div>
+</div></a>
+</div>
+</li>
+</ul>
+</div>
+<div class="header_tabs_column paths browse">
+<ul>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/architecture-construction">
+<div class="item-each">
+<div class="item-image"><img alt="Architecture &amp; Construction" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/architecture_construction.png" style="display:none;visibility:hidden;"><noscript><img alt="Architecture &amp; Construction" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/architecture_construction.png"></noscript></div>
+<div class="item-text">
+Architecture &amp; Construction
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/manufacturing-design">
+<div class="item-each">
+<div class="item-image"><img alt="Manufacturing &amp; Design" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/manufacturing_design.png" style="display:none;visibility:hidden;"><noscript><img alt="Manufacturing &amp; Design" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/manufacturing_design.png"></noscript></div>
+<div class="item-text">
+Manufacturing &amp; Design
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/business-professional">
+<div class="item-each">
+<div class="item-image"><img alt="Business Professional" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/business_professional.png" style="display:none;visibility:hidden;"><noscript><img alt="Business Professional" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/business_professional.png"></noscript></div>
+<div class="item-text">
+Business Professional
+</div>
+</div></a>
+</div>
+</li>
+<li>
+<div class="item">
+<a href="https://www.pluralsight.com/browse/information-cyber-security">
+<div class="item-each">
+<div class="item-image"><img alt="Information &amp; Cyber Security" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/information_security.png" style="display:none;visibility:hidden;"><noscript><img alt="Information &amp; Cyber Security" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/information_security.png"></noscript></div>
+<div class="item-text">
+Information &amp; Cyber Security
+</div>
+</div></a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_nav--menu header_nav_search">
+<div class="header_search search-button__component">
+<form id="header_searchForm" class="header_search--form" action="#">
+<input type="text" name="q" class="header_search--input" placeholder="What do you want to learn?" autocomplete="off" tabindex="2">
+<input type="text" disabled="disabled" autocomplete="off" class="search-menu__search-term--shadow">
+</form>
+<a href="https://www.pluralsight.com/search" class="hidden header_search--url"></a>
+ <div class="header_dropdown" style="display:none;">
+<div id="header_tabs--search" class="container-lg">
+<div class="closebutton" tabindex="3">x</div>
+<div id="header-search-results-all" class="header_tabs_content--container">
+<div id="search-menu__results-dropdown" class="header_tabs_column">
+<div id="header_dropdown--resultList"></div>
+<div id="header_dropdown--resultListCourses"></div>
+</div>
+<div class="header_tabs_column paths">
+<div id="header_dropdown--resultListPaths"></div>
+</div>
+</div>
+</div>
+</div>
+<script id="header-search-categories-templates-partial" type="text/x-handlebars-template">
+    {{#compare this.name '===' 'courses'}}
+    <ul class="header_dropdown--lists">
+        <li class="first">{{{this.name}}}</li>
+        {{#each this.results}}
+            <li><a href="{{formatCourseURL this.courseName 'course'}}">{{{this.title}}}</a></li>
+        {{/each}}
+        <li class="last"><a class="view-all-link" data-tab-param="{{mapResultSetNameToTabName this.name}}" data-categories="{{this.name}}">See more results &gt;</a></li>
+    </ul>
+    {{/compare}}
+</script>
+</div>
+</div>
+<div class="header_nav--menu header_nav_submenus indbiz-dropdown biz-dropdown">
+<a href="#" class="header_nav_secondary">Business <i class="icons" icon="down-arrow"></i></a>
+<div class="indbiz-dropdown--content">
+<div class="content-row">
+<div class="indbiz-dropdown--column">
+<div class="closebutton" tabindex="3">x</div>
+<div class="indbiz-dropdown--team indbiz-item">
+<div class="indbiz-item--image">
+<a href="https://www.pluralsight.com/business/teams"><img data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/b2b-hero1.jpg" alt="Team" style="display:none;visibility:hidden;" /><noscript><img src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/b2b-hero1.jpg" alt="Team" /></noscript></a>
+</div>
+<div class="indbiz-item--desc">
+<div class="indbiz-item--title">Team</div>
+<div>Help your team keep up with the pace of change.</div>
+<a href="https://www.pluralsight.com/business/teams">Built for teams ></a>
+</div>
+</div>
+<div class="indbiz-dropdown--ent indbiz-item">
+<div class="indbiz-item--image">
+<a href="https://www.pluralsight.com/business"><img data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/b2b-hero2.jpg" alt="Team" style="display:none;visibility:hidden;" /><noscript><img src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="/etc/clientlibs/pluralsight/main/images/global/header/b2b-hero2.jpg" alt="Team" /></noscript></a>
+</div>
+<div class="indbiz-item--desc">
+<div class="indbiz-item--title">Enterprise</div>
+<div>Helping thousands of organizations transform at scale.</div>
+<a href="https://www.pluralsight.com/business">Solutions at scale ></a>
+</div>
+</div>
+</div>
+<div class="indbiz-dropdown--trial">
+<div class="content-row">See how Pluralsight can bridge the technology skills gap for your entire team. <a href="https://www.pluralsight.com/buy?sku=PROFESSIONAL-SG-PILOT">Start a team trial &gt;</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_nav--menu header_nav_submenus"><a href="https://www.pluralsight.com/learn" class="header_nav_secondary">Personal</a></div>
+<div class="header_nav--menu header_nav_submenus targeted-audience targeted-audience-default"><a target="_blank" href="https://www.pluralsight.com/live?growid=live" class="header_nav_secondary ps-live-nav-link">LIVE 2019</a></div>
+<div class="header_nav--menu header_nav_submenus targeted-audience targeted-location" style="display:none;" data-targeted-countries="GB,IE,NL,BE,LU,SE,DK,NO,FI,DE,AT,CH,FR,IL,TR,ZA,IN"><a target="_blank" href="https://pluralsightevent.com/europe-19" class="header_nav_secondary ps-live-nav-link">LIVE EUROPE</a></div>
+<div class="header_nav">
+<ul>
+<li class="mobile-only">
+<ul>
+<li class="mobile-signin"><a class="header_sign_up_link" href="https://www.pluralsight.com/pricing" data-aa-title="nav-signup-cta">Get started</a></li>
+<li class="mobile-signin"><a class="no-border" href="https://app.pluralsight.com/id?" data-aa-title="nav-log-in">Log in</a></li>
+<li><a href="https://www.pluralsight.com/learn">Personal</a></li>
+<li><a href="https://www.pluralsight.com/business/teams">Team</a></li>
+<li><a href="https://www.pluralsight.com/business">Enterprise</a></li>
+<li class="targeted-audience targeted-audience-default"><a href="https://www.pluralsight.com/live?growid=live" target="_blank">LIVE 2019</a></li>
+<li class="targeted-audience targeted-location" data-targeted-countries="GB,IE,NL,BE,LU,SE,DK,NO,FI,DE,AT,CH,FR,IL,TR,ZA,IN" style="display:none;"><a href="https://pluralsightevent.com/europe-19" target="_blank">LIVE EUROPE</a></li>
+<li><a href="https://www.pluralsight.com/contact" class="no-border">Contact</a></li>
+<li class="mobile-breaker">Categories</li>
+<li><a href="https://www.pluralsight.com/browse/software-development">Software Development</a></li>
+<li><a href="https://www.pluralsight.com/browse/it-ops">IT Ops</a></li>
+<li><a href="https://www.pluralsight.com/browse/creative-professional">Creative Professional</a></li>
+<li><a href="https://www.pluralsight.com/browse/data-professional">Data Professional</a></li>
+<li><a href="https://www.pluralsight.com/browse/architecture-construction">Architecture &amp; Construction</a></li>
+<li><a href="https://www.pluralsight.com/browse/manufacturing-design">Manufacturing &amp; Design</a></li>
+<li><a href="https://www.pluralsight.com/browse/business-professional">Business Professional</a></li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security" class="no-border">Information &amp; Cyber Security</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<a href="#" class="header_menu">
+<div class="header_menu_line"></div>
+<div class="header_menu_line"></div>
+<div class="header_menu_line"></div>
+</a>
+<div class="header_utilities">
+<a href="https://app.pluralsight.com/id?" class="button flat white header_sign_in_link sign_in_link" data-aa-title="nav-log-in">Log in</a>
+<a href="https://www.pluralsight.com/pricing" class="button header_sign_up_link" data-aa-title="nav-signup-cta">Get started</a>
+</div>
+</header>
+<div class="header_padding"></div>
+</noindex>
+<div style="display:none;" id="b2c-top-promo">
+</div>
+<div id="site-promo" style="display:none;">
+<div id="site-promo-content">
+<div id="sitewide-promo-content-global"><div class="generic-block section">
+<div id=" sitewide-promo-home hide_" class="hidden"></div>
+<a href="https://www.pluralsight.com/techskillsday" class="full-block-link ">
+<div class="generic-block-wrapper  block block--true-black block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero  sitewide-promo-home hide    clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex   padding-top-ten padding-bottom-ten column-control--narrow">
+<div class="large-8 columns customPadding" style="padding-left: 60px; padding-right: 10px;"><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex   padding-top-twenty padding-bottom-twenty ">
+<div class="large-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h3 class="     title--center   title--ultra disableBottomMargin">
+TODAY IS #TECHSKILLSDAY
+</h3>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex   padding-top-twenty padding-bottom-twenty ">
+<div class="large-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h3 class="     title--center   title--ultra disableBottomMargin">
+TODAY IS #TECHSKILLSDAY
+</h3>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="large-4 columns customPadding" style="padding-left: 10px; padding-right: 60px;"><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex     ">
+<div class="large-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex     ">
+<div class="large-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex   padding-top-ten padding-bottom-ten column-control--narrow">
+<div class="large-8 columns customPadding" style="padding-left: 60px; padding-right: 10px;"><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex   padding-top-twenty padding-bottom-twenty ">
+<div class="large-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h3 class="     title--center   title--ultra disableBottomMargin">
+TODAY IS #TECHSKILLSDAY
+</h3>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex   padding-top-twenty padding-bottom-twenty ">
+<div class="large-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h3 class="     title--center   title--ultra disableBottomMargin">
+TODAY IS #TECHSKILLSDAY
+</h3>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="large-4 columns customPadding" style="padding-left: 10px; padding-right: 60px;"><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex     ">
+<div class="large-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex     ">
+<div class="large-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.e24ba64b-6f4f-4965-b1d4-a2609c34aead.png" alt="lets set a skills record" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="generic-block section">
+<div id="sitewide-promo-global_" class="hidden"></div>
+<a href="https://www.pluralsight.com/techskillsday" class="full-block-link ">
+<div class="generic-block-wrapper  block block--custom-color block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero sitewide-promo-global    clearfix" style="background: #E40084;">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row small  add-flex   padding-top-ten padding-bottom-ten column-control--narrow">
+<div class="small-7 columns "><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h4 class="     title--center   title--ultra disableBottomMargin">
+#TECHSKILLSDAY IS <span class="scribble-circle black">NOW</span>
+</h4>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h4 class="     title--center   title--ultra disableBottomMargin">
+#TECHSKILLSDAY IS <span class="scribble-circle black">NOW</span>
+</h4>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="small-5 columns "><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row small  add-flex   padding-top-ten padding-bottom-ten column-control--narrow">
+<div class="small-7 columns "><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h4 class="     title--center   title--ultra disableBottomMargin">
+#TECHSKILLSDAY IS <span class="scribble-circle black">NOW</span>
+</h4>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="title2 section">
+<div data-emptytext="Title">
+<h4 class="     title--center   title--ultra disableBottomMargin">
+#TECHSKILLSDAY IS <span class="scribble-circle black">NOW</span>
+</h4>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="small-5 columns "><div class="generic-block section">
+<div class="generic-block-wrapper  block block--transparent block--left generic-block--auto generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/cta-banners/sitewide-top-promo/_jcr_content/main/generic_block_179401/parsys/columns_copy/column-parsys-2/generic_block_copy/parsys/columns/column-parsys-1/image_copy/image-res.img.dd39dcc1-a217-4912-a90e-a9f4a6c8931d.png" alt="get started" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="free-form-component section">
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+var pathSupported = (window.location.pathname == '/');
+if(pathSupported) {
+       jQuery('.sitewide-promo-home').show();
+       jQuery('.sitewide-promo-global').hide();
+}
+});
+/*
+document.getElementsByTagName('body')[0].addEventListener("ps.promoTriggered", function(){
+   //promo triggered on this page, may not be shown if closed out of.
+});
+
+document.getElementsByTagName('body')[0].addEventListener("ps.promoShown", function(){
+   //promo became visible on this page.
+});
+*/
+</script></div>
+</div>
+</div>
+<div class="promo-close-button">&times;</div>
+</div>
+<script>
+                function showPromoIfPermitted(){
+                    if (document.cookie.indexOf("site-promo-closed=1") == -1){
+                        jQuery("#site-promo").show();
+                        jQuery("#b2c-top-promo").hide();
+                        jQuery("#site-promo .promo-close-button").click(function(){
+                            var d = new Date();
+                            d.setTime(d.getTime() + (24*60*60*1000));
+                            document.cookie = "site-promo-closed=1; expires=" + d.toUTCString() + "; path=/";
+                            jQuery("#site-promo").slideUp(300);
+                        });
+                        window.promoShown = true;
+                        dtmEventTrigger("ps.promoShown",{});
+                    }
+                    window.promoTriggered = true;
+                    dtmEventTrigger("ps.promoTriggered",{});
+                }
+                if (document.URL.indexOf("sitepromo=1") > -1){
+                    if (document.cookie.indexOf("site-promo-closed") > -1){
+                        var d = new Date();
+                        d.setTime(d.getTime());
+                        document.cookie = "site-promo-closed=0; expires=" + d.toUTCString() + "; path=/";
+                    }
+                    showPromoIfPermitted();
+                }
+            </script>
+<div id="content" role="main">
+<div class="contain"><div class="generic-block section">
+<div id="cigar-banner_" class="hidden"></div>
+<div class="generic-block-wrapper  block block--custom-color block--left generic-block--auto  padding-top-zero padding-bottom-zero cigar-banner    clearfix" style="background: #fff;">
+<div class="main clearfix">
+<div class="content clearfix"><div class="layout-block section">
+<div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--tablet--12 aem-Grid--phone--12 ">
+<div class="column-control aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--tablet--hide">
+<div>
+<div class="container column-control-container ">
+<div class="row large     padding-top-ten  column-control--super-wide">
+<div class="large-9 columns customPadding" style=" padding-right: 10px;"><div class="image-text3 section">
+<div class="image-text-component-3 clearfix style-tight">
+<div class="image">
+<img data-cfsrc="/content/pluralsight/en/_jcr_content/main/generic_block_copy_960714428/parsys/layout_block/parsys/columns/column-parsys-1/image_text3/image/image-res.img.6af61f47-7fc1-42db-a81b-7ba7e8df919c.png" alt="GetPrime" data-cfstyle="  max-width: 120%;" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/_jcr_content/main/generic_block_copy_960714428/parsys/layout_block/parsys/columns/column-parsys-1/image_text3/image/image-res.img.6af61f47-7fc1-42db-a81b-7ba7e8df919c.png" alt="GetPrime" style="  max-width: 120%;" /></noscript>
+</div>
+<div class="text-4" style="margin-top:5px; ">
+<div class="cmp-text">
+<p><span class="fs--medium">| <b>Pluralsight is acquiring GitPrime</b></span></p>
+</div>
+</div>
+</div></div>
+<div class="free-form-component section">
+<style>
+  .cigar-banner  .text-4 {
+    color: #0096AD;
+
+}
+</style>
+</div>
+</div>
+<div class="large-3 columns customPadding" style="padding-left: 10px; "><div class="spacer section">
+<div class="spacer  " style="height:10px"></div>
+</div>
+<div class="link section">
+<div>
+<a href="https://www.pluralsight.com/newsroom/press-releases/pluralsight-to-acquire-gitprime" data-aa-title="press-release" class="arrow blue    " target="_self">
+Learn more
+</a>
+</div></div>
+<div class="spacer section">
+<div class="spacer  " style="height:20px"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="layout-block section">
+<div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--tablet--12 aem-Grid--phone--12 ">
+<div class="column-control aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--phone--none aem-GridColumn--default--hide aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+<div>
+<div class="container column-control-container ">
+<div class="row large     padding-top-ten  column-control--super-wide">
+<div class="large-9 columns customPadding" style="padding-left: 60px; padding-right: 10px;"><div class="free-form-component section">
+<style>
+  .cigar-banner  .text-4 {
+    color: #0096AD;
+
+}
+</style>
+</div>
+<div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large       column-control--super-wide">
+<div class="large-12 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/_jcr_content/main/generic_block_copy_960714428/parsys/layout_block_copy/parsys/columns/column-parsys-1/column_control/column-parsys-1/image/image-res.img.7a1a5727-ccef-4096-93f2-a554e094fc17.png" alt="GetPrime" data-cfstyle=" max-height: 60px; max-width: 120%;" class="image--left " style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/_jcr_content/main/generic_block_copy_960714428/parsys/layout_block_copy/parsys/columns/column-parsys-1/column_control/column-parsys-1/image/image-res.img.7a1a5727-ccef-4096-93f2-a554e094fc17.png" alt="GetPrime" style=" max-height: 60px; max-width: 120%;" class="image--left " /></noscript>
+</div>
+<div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large       column-control--super-wide">
+<div class="large-12 columns "><div class="text-4 text section">
+<div class="cmp-text">
+<p><span class="fs--normal"><b><span class="remove-bottom-margin">Pluralsight is acquiring GitPrime</span></b></span></p>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:20px"></div>
+</div>
+<div class="link section">
+<div>
+<a href="https://www.pluralsight.com/newsroom/press-releases/pluralsight-to-acquire-gitprime" data-aa-title="press-release" class="arrow blue    " target="_self">
+Learn more
+</a>
+</div></div>
+<div class="spacer section">
+<div class="spacer  " style="height:20px"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="large-3 columns customPadding" style="padding-left: 10px; padding-right: 60px;">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="generic-block section">
+<div id="gtm-hero_" class="hidden"></div>
+<div class="generic-block-wrapper  block block--custom-color block--left generic-block--auto  padding-top-hundred padding-bottom-hundred gtm-hero    clearfix" style="background: #0096AD;">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large       column-control--super-wide">
+<div class="large-8 columns "><div class="free-form-component section">
+<h1>
+<img class="hide-for-small-only" data-cfsrc="/content/dam/pluralsight2/gtm-assets/home-scribble.png" style="display:none;visibility:hidden;" /><noscript><img class="hide-for-small-only" src="/content/dam/pluralsight2/gtm-assets/home-scribble.png" /></noscript>
+<img class="show-for-small-only" data-cfsrc="/content/dam/pluralsight2/gtm-assets/home-scribble-mobile.png" alt="Right time, right tech skills." style="display:none;visibility:hidden;" /><noscript><img class="show-for-small-only" src="/content/dam/pluralsight2/gtm-assets/home-scribble-mobile.png" alt="Right time, right tech skills." /></noscript>
+</h1>
+</div>
+<div class="text-4 text section">
+<div class="cmp-text">
+<p><span class="fs--medium"><span class="tc-white">With our platform, you can quantify your skills, grow in your role and stay relevant on critical topics.</span></span><br />
+</p>
+</div>
+</div>
+<div class="ps-button section">
+<div data-emptytext="Button">
+<div>
+<a href="https://www.pluralsight.com/buy?requestId=eb0c3716-6d1d-4ecb-a312-8481012f3e63&amp;priceOptionId=38caef87-c62d-4b7f-9062-1e77cdc7dd88&amp;legacyTrackingId=IND-M-PLUS-FT" target="_blank" class="button  button--black button--large  " data-aa-title="home-hero-free-trial">
+Start a free 10-day trial
+</a>
+</div>
+</div></div>
+</div>
+<div class="large-4 columns ">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="generic-block section">
+<div id="paths_please2_" class="hidden"></div>
+<div class="generic-block-wrapper parallax block block--black block--left   padding-top-fifty padding-bottom-fifty paths_please2    clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex     column-control--super-wide">
+<div class="large-4 columns "><div class="free-form-component section">
+<style>
+//.paths_please.generic-block-wrapper {background-color: #111;}
+.paths_please2 h2 {line-height: 1; margin-bottom: 20px; font-weight: 400; color: #fff;}
+.paths_please2 .roles-textbox {font-size: 16px; font-weight: 300; color: #eee; line-height: 30px; min-height:180px; padding-right: 30px; padding-bottom: 20px;}
+
+.roles-expert-title {font-size: 28px; font-weight: 300; line-height: 1.2; margin-bottom: 20px; color: #fff;}
+
+@media only screen and (min-width: 800px) {
+.paths_please2 h2 {display: none;}
+}
+
+@media only screen and (max-width: 799px) {
+.roles-expert-title {display: none;}
+}
+
+
+@media only screen and (max-width: 1024px) {
+.paths_please .roles-textbox {padding-right: 0; min-height:unset; }
+}
+</style>
+<h2>See where you stand</h2>
+<div class="roles-expert-title">Build <strong>dev</strong> skills</div>
+<div class="roles-textbox">Ship better products faster by keeping up with the latest programming languages and frameworks. Start with Role IQ or Skill IQ. </div>
+<a href="https://www.pluralsight.com/product/role-iq#block_all_roleiq_" class="text-link">View all roles ></a>
+</div>
+</div>
+<div class="large-8 columns "><div class="free-form-component section">
+<style>
+  .slick-list,.slick-slider,.slick-track{position:relative;display:block}.slick-loading .slick-slide,.slick-loading .slick-track{visibility:hidden}.slick-slider{box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{top:0;left:0}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
+
+
+
+.role-carousel {margin-bottom: 0; padding: 0 25px; max-height: 220px;}
+.role-carousel .slick-slide {margin: 0 10px;}
+.role-carousel .slick-prev, .role-carousel .slick-next {z-index: 1; transform: translateY(-50%); margin: 0; width: 25px; height: 34px; min-width: 25px; margin-top: -15px;}
+.role-carousel .slick-prev {left: 0;} 
+.role-carousel .slick-next {right: 0;} 
+.role-carousel .slick-prev:before {content: url(/content/dam/pluralsight2/careers/awards/2018/carousel/slide-prev.png); transform: scale(0.5); display: block; position: relative; top: -16px;}
+.role-carousel .slick-next:before {content: url(/content/dam/pluralsight2/careers/awards/2018/carousel/slide-next.png); transform: scale(0.5); display: block; position: relative; top: -16px;}
+
+.role-carousel .roles-item {margin: 0 10px; outline: none;}
+.role-carousel .roles-item a {display: block; outline: none;}
+.role-carousel .roles-box {background-color: #222; box-shadow: 0px 10px 30px -14px rgba(0,0,0,0.3); padding: 15px; height: 220px; transition: background-color ease-in 0.25s;}
+.role-carousel .roles-item a:hover, .paths-carousel .paths-item a:focus, .paths-carousel .paths-item a:active {text-decoration: none;}
+.role-carousel .roles-item a:hover .paths-box {background-color: #363636;}
+.role-carousel .roles-item a  img {width:50px; margin-bottom: 20px;}
+.role-carousel .roles-item-title {font-size: 18px; line-height: 1.2; color: white; font-weight: 700; margin-bottom: 10px;}
+.role-carousel .roles-item a .roles-item-iq {font-size: 14px; color: #cccccc; font-weight: 500; display: flex;}
+.role-carousel .roles-item a .roles-item-iq img {margin: 0; width: 20px; height: 20px; margin-right: 10px;}
+
+@media only screen and (max-width: 1024px) {
+.role-carousel  {margin-top: 50px;}
+}
+</style>
+<div class="role-carousel">
+<div class="roles-item" data-info="softdev">
+<a href="https://www.pluralsight.com/role-iq/angular-web-developer">
+<div class="roles-box">
+<img alt="Angular Web Developer" src="https://s2.pluralsight.com/roleiq/imgs/badge_angular_developer.svg?w=50">
+<div class="roles-item-title">
+Angular Web Developer
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="softdev">
+<a href="https://www.pluralsight.com/role-iq/java-developer">
+<div class="roles-box">
+<img alt=" Java Developer" src="https://s2.pluralsight.com/roleiq/imgs/badge_JavaWebDeveloper2.svg?w=50">
+<div class="roles-item-title">
+Java Developer
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="softdev">
+<a href="https://www.pluralsight.com/role-iq/node-web-developer">
+<div class="roles-box">
+<img alt="Node Web Developer" src="https://s2.pluralsight.com/roleiq/imgs/badge_nodejs_developer.svg?w=50">
+<div class="roles-item-title">
+Node Web Developer
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="softdev">
+<a href="https://www.pluralsight.com/role-iq/react-web-developer">
+<div class="roles-box">
+<img alt="React Web Developer" src="https://s2.pluralsight.com/roleiq/imgs/badge_react_developer.svg?w=50">
+<div class="roles-item-title">
+React Web Developer
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="itops">
+<a href="https://www.pluralsight.com/role-iq/security-analyst">
+<div class="roles-box">
+<img alt="Security Analyst" src="https://s2.pluralsight.com/roleiq/imgs/badge_security_analyst.svg?w=50">
+<div class="roles-item-title">
+Security Analyst
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="itops">
+<a href="https://www.pluralsight.com/role-iq/microsoft-windows-server">
+<div class="roles-box">
+<img alt="Server Administrator (Microsoft Windows Server)" src="https://s2.pluralsight.com/roleiq/imgs/badge_microsoft_administrator.svg?w=50">
+<div class="roles-item-title">
+Server Administrator (Microsoft Windows Server)
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="itops">
+<a href="https://www.pluralsight.com/role-iq/developer-on-aws">
+<div class="roles-box">
+<img alt="Developer on AWS" src="https://s2.pluralsight.com/roleiq/imgs/badge_AWSDeveloper2.svg?w=50">
+<div class="roles-item-title">
+Developer on AWS
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="itops">
+<a href="https://www.pluralsight.com/role-iq/microsoft-azure-solution-architect">
+<div class="roles-box">
+<img alt="Microsoft Azure Solution Architect" src="https://s2.pluralsight.com/roleiq/imgs/badge_azure_architect4.svg?w=50">
+<div class="roles-item-title">
+Microsoft Azure Solution Architect
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="data">
+<a href="https://www.pluralsight.com/role-iq/cloud-architect-aws">
+<div class="roles-box">
+<img alt="Cloud Architect (AWS)" src="https://s2.pluralsight.com/roleiq/imgs/badge_AWSArchitect2.svg?w=50">
+<div class="roles-item-title">
+Cloud Architect (AWS)
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="data">
+<a href="https://www.pluralsight.com/role-iq/bi-data-analyst">
+<div class="roles-box">
+<img alt="BI / Data Analyst (Tableau)" src="https://s2.pluralsight.com/roleiq/imgs/badge_tableau_analyst.svg?w=50">
+<div class="roles-item-title">
+BI / Data Analyst (Tableau)
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="data">
+<a href="https://www.pluralsight.com/role-iq/bi--data-analyst-microsoft-sql-server-stack">
+<div class="roles-box">
+<img alt="BI / Data Analyst (Microsoft SQL Server Stack)" src="https://s2.pluralsight.com/roleiq/imgs/badge_dataAnalystMicrosoftSQLServer2.svg?w=50">
+<div class="roles-item-title">
+BI / Data Analyst (Microsoft SQL Server Stack)
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="data">
+<a href="https://www.pluralsight.com/role-iq/bi--data-analyst-microsoft-self-service">
+<div class="roles-box">
+<img alt="BI / Data Analyst (Microsoft Self-Service)" src="https://s2.pluralsight.com/roleiq/imgs/badge_dataAnalystMicrosoftSelfService2.svg?w=50">
+<div class="roles-item-title">
+BI / Data Analyst (Microsoft Self-Service)
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="security">
+<a href="https://www.pluralsight.com/role-iq/security-analyst">
+<div class="roles-box">
+<img alt="Security Analyst" src="https://s2.pluralsight.com/roleiq/imgs/badge_security_analyst.svg?w=50">
+<div class="roles-item-title">
+Security Analyst
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="security">
+<a href="https://www.pluralsight.com/role-iq/ibm-qradar-security-analyst">
+<div class="roles-box">
+<img alt="IBM QRadar Security Analyst" src="https://s2.pluralsight.com/roleiq/imgs/badge_QRadarSecurityAnalyst2.svg?w=50">
+<div class="roles-item-title">
+IBM QRadar Security Analyst
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Role IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="security">
+<a href="https://www.pluralsight.com/paths/cisspr-certified-information-systems-security-professional">
+<div class="roles-box">
+<img alt="Certified Information Systems Security Professional" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/info-security-5d8ab8e621.png?w=100" style="display:none;visibility:hidden;"><noscript><img alt="Certified Information Systems Security Professional" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/info-security-5d8ab8e621.png?w=100"></noscript>
+<div class="roles-item-title" style="font-size:14px;">
+Certified Information Systems Security Professional
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Skill IQ
+</div>
+</div>
+</div></a>
+</div>
+<div class="roles-item" data-info="security">
+<a href="https://www.pluralsight.com/paths/security-fundamentals">
+<div class="roles-box">
+<img alt="Security Fundamentals" data-cfsrc="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/info-security-5d8ab8e621.png?w=100" style="display:none;visibility:hidden;"><noscript><img alt="Security Fundamentals" src="/etc/clientlibs/pluralsight/main/images/px.jpg" data-lazysrc="https://pluralsight.imgix.net/paths/path-icons/info-security-5d8ab8e621.png?w=100"></noscript>
+<div class="roles-item-title">
+Security Fundamentals
+</div>
+<div class="roles-item-iq">
+<img data-cfsrc="/content/dam/pluralsight2/homepage/iq-test-icon.png" style="display:none;visibility:hidden;"><noscript><img src="/content/dam/pluralsight2/homepage/iq-test-icon.png"></noscript>
+<div>
+Get your Skill IQ
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<script src="/etc/clientlibs/pluralsight/main/js/separates/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  jQuery('.role-carousel').slick({
+  dots: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        //autoplay: true,
+        //autoplaySpeed: 5000
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        //autoplay: true,
+        //autoplaySpeed: 2000
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        //autoplay: true,
+        //autoplaySpeed: 2000
+      }
+    }
+  ]
+});
+
+jQuery('.paths_please2').find('.columns.large-4').removeClass('large-4').addClass('large-3');
+jQuery('.paths_please2').find('.columns.large-8').removeClass('large-8').addClass('large-9');
+</script></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="free-form-component section">
+<script type="text/javascript">
+  function textSwapper2() {
+    setInterval(function () {
+    if (jQuery(window).width() >= 799) {
+        jQuery(document).on('click', '.role-carousel button', function(e) {
+            e.stopPropagation();
+            if (jQuery('.roles-item[data-info="softdev"]').hasClass('slick-active')) {
+                jQuery('.roles-expert-title span').text('a');
+                jQuery('.roles-expert-title strong').text('dev');
+                jQuery('.roles-textbox').text('Ship better products faster by keeping up with the latest programming languages and frameworks. Start with Role IQ or Skill IQ.');
+            } else if (jQuery('.roles-item[data-info="itops"]').hasClass('slick-active')) {
+                jQuery('.roles-expert-title span').text('an');
+                jQuery('.roles-expert-title strong').text('IT');
+                jQuery('.roles-textbox').text('Transition to the cloud, embrace modern server infrastructure and prepare for certification exams. Start with Role IQ or Skill IQ.');
+            } else if (jQuery('.roles-item[data-info="data"]').hasClass('slick-active')) {
+                jQuery('.roles-expert-title span').text('a');
+                jQuery('.roles-expert-title strong').text('data');
+                jQuery('.roles-textbox').text('Extract, analyze and visualize data to drive impact. Start with Role IQ or Skill IQ.');
+            } else if (jQuery('.roles-item[data-info="security"]').hasClass('slick-active')) {
+                jQuery('.roles-expert-title span').text('a');
+                jQuery('.roles-expert-title strong').text('security');
+                jQuery('.roles-textbox').text('Deliver secure products, stay ahead of emerging threats and protect company data. Start with Role IQ or Skill IQ.');
+            }
+        });
+        if (jQuery('.roles-item[data-info="softdev"]').hasClass('slick-active')) {
+            jQuery('.roles-expert-title span').text('a');
+            jQuery('.roles-expert-title strong').text('dev');
+            jQuery('.roles-textbox').text('Ship better products faster by keeping up with the latest programming languages and frameworks. Start with Role IQ or Skill IQ.');
+        } else if (jQuery('.roles-item[data-info="itops"]').hasClass('slick-active')) {
+            jQuery('.roles-expert-title span').text('an');
+            jQuery('.roles-expert-title strong').text('IT');
+            jQuery('.roles-textbox').text('Transition to the cloud, embrace modern server infrastructure and prepare for certification exams. Start with Role IQ or Skill IQ.');
+        } else if (jQuery('.roles-item[data-info="data"]').hasClass('slick-active')) {
+            jQuery('.roles-expert-title span').text('a');
+            jQuery('.roles-expert-title strong').text('data');
+            jQuery('.roles-textbox').text('Extract, analyze and visualize data to drive impact. Start with Role IQ or Skill IQ.');
+        } else if (jQuery('.roles-item[data-info="security"]').hasClass('slick-active')) {
+            jQuery('.roles-expert-title span').text('a');
+            jQuery('.roles-expert-title strong').text('security');
+            jQuery('.roles-textbox').text('Deliver secure products, stay ahead of emerging threats and protect company data. Start with Role IQ or Skill IQ.');
+        }
+    } else {
+        jQuery(document).on('click', '.roles-carousel button', function(e) {
+            jQuery('.paths_please2 h2').text('See where you stand');
+            jQuery('.roles-textbox').text('In as little as five minutes and 20 questions, measure and benchmark your skills with Role IQ or Skill IQ.');
+        });
+        jQuery('.paths_please2 h2').text('See where you stand');
+        jQuery('.roles-textbox').text('In as little as five minutes and 20 questions, measure and benchmark your skills with Role IQ or Skill IQ.');
+    }
+    }, 1500);
+}
+// On Load
+   textSwapper2();
+
+// On Resize
+   jQuery(window).resize(function() {
+    textSwapper2();
+   });
+</script></div>
+</div>
+</div>
+</div>
+</div>
+<div class="generic-block section">
+<div class="generic-block-wrapper  block block--true-black block--center generic-block--auto  padding-top-fifty padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row        ">
+<div class="medium-12 columns "><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade-up" data-aos-duration="400" data-aos-delay="0">
+<div class="main clearfix">
+<div class="clearfix"><div class="title2 section">
+<div data-emptytext="Title">
+<h6 class="     title--center    ">
+Helping thousands of organizations build tech skills at scale
+</h6>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large       column-control--narrow">
+<div class="large-five-col columns "><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade" data-aos-duration="400" data-aos-delay="100">
+<div class="main clearfix">
+<div class="clearfix"><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-1/animation_wrapper/parsys/image/image-res.img.d231da23-199c-40a9-a35c-03ea5d774ee1.png" alt="adobe" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-1/animation_wrapper/parsys/image/image-res.img.d231da23-199c-40a9-a35c-03ea5d774ee1.png" alt="adobe" /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:50px"></div>
+</div>
+</div>
+<div class="large-five-col columns "><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade" data-aos-duration="400" data-aos-delay="150">
+<div class="main clearfix">
+<div class="clearfix"><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-2/animation_wrapper/parsys/image_2125854692/image-res.img.3301833a-512e-4502-9f5f-a33c2793b6bd.png" alt="adp-logo" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-2/animation_wrapper/parsys/image_2125854692/image-res.img.3301833a-512e-4502-9f5f-a33c2793b6bd.png" alt="adp-logo" /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:50px"></div>
+</div>
+</div>
+<div class="large-five-col columns "><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade" data-aos-duration="400" data-aos-delay="200">
+<div class="main clearfix">
+ <div class="clearfix"><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-3/animation_wrapper/parsys/image_1825205693/image-res.img.7887c3ee-31f8-4044-9cf9-8b0daed3c72f.png" alt="vmware-logo" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-3/animation_wrapper/parsys/image_1825205693/image-res.img.7887c3ee-31f8-4044-9cf9-8b0daed3c72f.png" alt="vmware-logo" /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:50px"></div>
+</div>
+</div>
+<div class="large-five-col columns "><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade" data-aos-duration="400" data-aos-delay="250">
+<div class="main clearfix">
+<div class="clearfix"><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-4/animation_wrapper/parsys/image_1825205693_cop/image-res.img.851c626e-a83c-417a-9e0b-d0665b7c929a.png" alt="gamestop-logo" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-4/animation_wrapper/parsys/image_1825205693_cop/image-res.img.851c626e-a83c-417a-9e0b-d0665b7c929a.png" alt="gamestop-logo" /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:50px"></div>
+</div>
+</div>
+<div class="large-five-col columns "><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade" data-aos-duration="400" data-aos-delay="300">
+<div class="main clearfix">
+<div class="clearfix"><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-5/animation_wrapper/parsys/image_1825205693_cop/image-res.img.118ede4c-3df7-4135-8095-9ac1b17a573d.png" alt="nasdaq-logo" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/_jcr_content/main/generic_block/parsys/columns/column-parsys-1/column_control/column-parsys-5/animation_wrapper/parsys/image_1825205693_cop/image-res.img.118ede4c-3df7-4135-8095-9ac1b17a573d.png" alt="nasdaq-logo" /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:50px"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="generic-block section">
+<div class="generic-block-wrapper  block block--dark-gray-2 block--left generic-block--auto  padding-top-hundred-fifty padding-bottom-hundred-fifty     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large  add-flex     column-control--super-wide">
+<div class="large-7 columns customPadding" style=" padding-right: 50px;"><div class="generic-block section">
+<div class="generic-block-wrapper  block block--dark-gray-2 block--left  generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade-up" data-aos-duration="400" data-aos-delay="0">
+<div class="main clearfix">
+<div class="clearfix"><div class="image section">
+<img data-cfsrc="/content/dam/pluralsight2/gtm-assets/app-screens/home-collage-v2.png" alt="a platform for tech teams" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/dam/pluralsight2/gtm-assets/app-screens/home-collage-v2.png" alt="a platform for tech teams" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade-up" data-aos-duration="400" data-aos-delay="0">
+<div class="main clearfix">
+<div class="clearfix"><div class="image section">
+<img data-cfsrc="/content/dam/pluralsight2/gtm-assets/app-screens/home-collage-v2.png" alt="a platform for tech teams" class="image--center " style="display:none;visibility:hidden;" /><noscript><img src="/content/dam/pluralsight2/gtm-assets/app-screens/home-collage-v2.png" alt="a platform for tech teams" class="image--center " /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ </div>
+</div>
+</div>
+<div class="large-5 columns customPadding" style="padding-left: 50px; "><div class="generic-block section">
+<div class="generic-block-wrapper  block block--dark-gray-2 block--left  generic-block--vertical-center padding-top-zero padding-bottom-zero     clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="image section">
+<img data-cfsrc="/content/dam/pluralsight2/gtm-assets/home-tag.png" alt="A skills platform for tech teams." style="display:none;visibility:hidden;" /><noscript><img src="/content/dam/pluralsight2/gtm-assets/home-tag.png" alt="A skills platform for tech teams." /></noscript>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:40px"></div>
+</div>
+<div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
+<div class="main clearfix">
+<div class="clearfix"><div class="text-4 text section">
+<div class="cmp-text">
+<p>Pluralsight gives you confidence you have the right skills to move your strategy forward.</p>
+<p>With our expert courses, skill assessments and one-of-a-kind analytics, you can align your organization around digital initiatives, upskill people into modern tech roles and build adaptable teams that deliver faster.</p>
+</div>
+</div>
+<div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade" data-aos-duration="400" data-aos-delay="300">
+<div class="main clearfix">
+<div class="clearfix"><div class="link section">
+<div>
+<a href="https://www.pluralsight.com/business" data-aa-title="home-learn-more" class="plain pink    bold" target="_self">
+Learn more
+</a>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="placeholder clearfix" style="visibility:hidden"><div class="image section">
+<img data-cfsrc="/content/dam/pluralsight2/gtm-assets/home-tag.png" alt="A skills platform for tech teams." style="display:none;visibility:hidden;" /><noscript><img src="/content/dam/pluralsight2/gtm-assets/home-tag.png" alt="A skills platform for tech teams." /></noscript>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:40px"></div>
+</div>
+<div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
+<div class="main clearfix">
+<div class="clearfix"><div class="text-4 text section">
+<div class="cmp-text">
+<p>Pluralsight gives you confidence you have the right skills to move your strategy forward.</p>
+<p>With our expert courses, skill assessments and one-of-a-kind analytics, you can align your organization around digital initiatives, upskill people into modern tech roles and build adaptable teams that deliver faster.</p>
+</div>
+</div>
+<div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade" data-aos-duration="400" data-aos-delay="300">
+<div class="main clearfix">
+<div class="clearfix"><div class="link section">
+<div>
+<a href="https://www.pluralsight.com/business" data-aa-title="home-learn-more" class="plain pink    bold" target="_self">
+Learn more
+</a>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="generic-block section">
+<div id="gtm-footer-cta_" class="hidden"></div>
+<div class="generic-block-wrapper  block block--custom-color block--light block--left generic-block--auto  padding-top-hundred padding-bottom-hundred gtm-footer-cta    clearfix" style="background: #4CB272;">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large       column-control--super-wide">
+<div class="large-12 columns customPadding" style="padding-left: 60px; padding-right: 60px;"><div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade-up" data-aos-duration="400" data-aos-delay="0">
+<div class="main clearfix">
+<div class="clearfix"><div class="title2 section">
+<div data-emptytext="Title">
+<h2 class="title--white        title--ultra disableBottomMargin">
+Future-proof<br /> your <span class="scribble-under black">skills<span></span></span>
+</h2>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:30px"></div>
+</div>
+<div class="animation-wrapper section">
+<div class="animation-wrapper-container" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
+<div class="main clearfix">
+<div class="clearfix"><div class="ps-button section">
+<div data-emptytext="Button">
+<div>
+<a href="https://www.pluralsight.com/buy?sku=IND-M-PLUS-FT" target="_self" class="button  button--black button--large  " data-aa-title="home-foot-free-trial">
+Start a FREE 10-day trial
+</a>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="reference parbase section"><div style="display:inline;" class="cq-dd-paragraph"><div class="main parsys"><div class="generic-block section">
+<div id="pilot_" class="hidden"></div>
+<div class="generic-block-wrapper parallax block block--black block--left   padding-top-hundred-fifty padding-bottom-hundred-fifty pilot    clearfix">
+<div class="main clearfix">
+<div class="content clearfix"><div class="column-control section">
+<div>
+<div class="container column-control-container ">
+<div class="row large       column-control--super-wide">
+<div class="large-7 columns customPadding" style="padding-left: 0px; padding-right: 30px;"><div class="title2 section">
+<div data-emptytext="Title">
+<h2 class="        title--ultra ">
+TRANSFORM YOUR <br />BUSINESS AT SCALE
+</h2>
+</div></div>
+<div class="title section">
+<div data-emptytext="Title">
+<h3>
+Test drive the platform 70% of the Fortune 500 rely on to build technology skills at scale
+</h3>
+</div></div>
+<div class="spacer section">
+<div class="spacer  " style="height:50px"></div>
+</div>
+<div class="list section"><div class="list-comp">
+<ul>
+<li>Benchmark skills across your organization with skill assessments</li>
+<li>See if you have the right people on the projects with Role IQ</li>
+<li>Upskill your teams in critical areas like DevOps, machine learning, cloud, security, infrastructure and more </li>
+</ul>
+</div>
+</div>
+<div class="text-4 text section">
+<div class="cmp-text">
+<p><span class="fs--normal">Fill out the form, and we’ll be in touch to set up your team pilot.</span></p>
+</div>
+</div>
+<div class="spacer section">
+<div class="spacer  " style="height:20px"></div>
+</div>
+<div class="column-control section">
+<div>
+<div class="container column-control-container gridStacking">
+<div class="row medium       ">
+<div class="medium-3 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-1/image/image-res.img.2d7ccc0f-18cb-4d0f-8f17-d0bd086af7e8.png" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-1/image/image-res.img.2d7ccc0f-18cb-4d0f-8f17-d0bd086af7e8.png" /></noscript>
+</div>
+</div>
+<div class="medium-3 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-2/image_859186222/image-res.img.d8bca765-df97-4723-a84d-51ea8203da40.png" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-2/image_859186222/image-res.img.d8bca765-df97-4723-a84d-51ea8203da40.png" /></noscript>
+</div>
+</div>
+<div class="medium-3 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-3/image/image-res.img.962fa584-d31e-4be0-ae66-9fb1f97a4c3b.png" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-3/image/image-res.img.962fa584-d31e-4be0-ae66-9fb1f97a4c3b.png" /></noscript>
+</div>
+</div>
+<div class="medium-3 columns "><div class="image section">
+<img data-cfsrc="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-4/image_copy/image-res.img.a0870b6a-ee75-4c96-adf6-56012017ee5f.png" alt="Adobe" style="display:none;visibility:hidden;" /><noscript><img src="/content/pluralsight/en/global/modals0/pilot/_jcr_content/main/generic_block/parsys/column_control/column-parsys-1/column_control/column-parsys-4/image_copy/image-res.img.a0870b6a-ee75-4c96-adf6-56012017ee5f.png" alt="Adobe" /></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="large-5 columns customPadding" style="padding-left: 30px; padding-right: 0px;"><div class="spacer section">
+<div class="spacer hide-for-small-only hide-for-medium-only" style="height:0px"></div>
+<div class="spacer show-for-medium-only" style="height:80px"></div>
+<div class="spacer show-for-small-only" style="height:80px"></div></div>
+<div class="free-form-component section">
+<img data-cfsrc="https://www.pluralsight.com/content/dam/pluralsight2/product/business_platform/ps_close_btn@2x.png" class="ps_pilot_close_btn" style="display:none;visibility:hidden;" /><noscript><img src="https://www.pluralsight.com/content/dam/pluralsight2/product/business_platform/ps_close_btn@2x.png" class="ps_pilot_close_btn" /></noscript>
+</div>
+<div class="title2 section">
+<div data-emptytext="Title">
+<h3 class="     title--center    ">
+Start a pilot
+</h3>
+</div></div>
+<div class="marketo-form section">
+<div class="marketo-form-component marketo-form--stacked marketo-form--center     clearfix">
+<div class="marketo-form-data hidden">
+<span class="form-preset"> </span>
+<span class="form-id">1015</span>
+<a href="https://www.pluralsight.com/business/pilot-request/thank-you" class="redirect-path">Redirect Link</a>
+<span class="download-path"></span>
+<span class="success-message"></span>
+<span class="marketo-wid"></span>
+<span class="marketo-biz-email"></span>
+</div>
+<form id="marketoForm_1015" class="marketo-target"><div class="loading-message"><p class="loading-message-top">Loading form...</p><p class="loading-message-bottom">If this message remains, it may be due to cookies being disabled or to an ad blocker.</p></div></form>
+<iframe id="marketo-file" style="display:none;"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="free-form-component section">
+<div>
+<script type="text/javascript">
+    
+        jQuery(document).ready(function(){
+            jQuery('#pilot_').parent().attr('id','ps_pilot'); 
+        });  
+        
+        jQuery(document).ready(function(){ 
+            jQuery( 'a[href="#ps_pilot_modal"]' ).removeClass('fancybox');
+            jQuery( 'a[href="#ps_pilot_modal"]' ).unbind('click.fb-start');
+            jQuery(document).on({
+                click:function(e){ 
+                    jQuery('#ps_pilot').show();
+                    jQuery('body').css('overflow','hidden');   
+                    window.setTimeout(function(){
+                        jQuery('#ps_pilot').addClass('ps_pilot_active')
+                    },50);
+                }
+            },'a[href="#ps_pilot_modal"]');
+        });
+
+        jQuery(document).on({
+            click:function(e){   
+                e.preventDefault(); 
+                jQuery('#ps_pilot').removeClass('ps_pilot_active'); 
+                jQuery('body').css('overflow','auto');
+                window.setTimeout(function(){
+                    jQuery('#ps_pilot').hide();
+                },700);
+            }
+        },'.ps_pilot_close_btn');
+    
+    </script>
+<style type="text/css"> 
+        #ps_pilot {  
+            background:rgba(0,0,0,0.9); 
+            bottom:0;  
+            display:none;
+            left:0; 
+            opacity:0;    
+            overflow:scroll;
+            overflow-x: hidden; 
+            overflow-y: scroll;  
+            -webkit-overflow-scrolling:touch;
+            -moz-overflow-scrolling:touch;
+            -ms-overflow-scrolling:touch;
+            -o-overflow-scrolling:touch;
+            overflow-scrolling:touch;
+            position:fixed; 
+            right:0;   
+            transition:opacity 0.7s ease;
+            top:0;
+            z-index:99999;                                   
+        } 
+        
+        .mode-edit #ps_pilot {     
+            display:block;  
+            opacity:1;
+            position:relative;
+        }
+        
+        #ps_pilot.ps_pilot_active {
+            opacity:1;
+        }  
+        
+        #ps_pilot .block--black {
+            background-color:transparent !important;
+        }
+        
+        #ps_pilot h2 {
+            font-size:500;
+        }
+        
+        #ps_pilot .ps_pilot_close_btn {
+            position:fixed;
+            top:10px;
+            right:10px;
+            width:50px; 
+            z-index:9999;
+                        cursor: pointer;
+        }
+        
+        #ps_pilot .container {
+            max-width:1280px;
+            margin:0 auto;
+        }       
+        
+        #ps_pilot .list-comp ul {
+            margin-left:0.5rem;
+        } 
+        
+        #ps_pilot .list-comp li { 
+            color:#AAA;
+            font-size:18px; 
+            font-weight:100; 
+            text-indent:15px;
+        }
+        
+        #ps_pilot .list-comp li:before {
+            background:url(https://www.pluralsight.com/content/dam/pluralsight2/product/business_platform/pilot_checkbox@2x.png) no-repeat center center; 
+            background-size:15px 10px;  
+            content:""; 
+            height:27px;
+            width:15px;
+        } 
+        
+        #ps_pilot form .mktoAsterix { 
+            color:#DE3636 !important;
+            margin-right:4px;
+        }
+        
+        #ps_pilot form input,
+        #ps_pilot form textarea {
+            background:#222;
+            border:solid 1px #555; 
+            color:#fff !important;
+        }  
+        
+        #ps_pilot form label {
+            color:#ccc !important;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        #ps_pilot form select {
+            background-color: #222;                                                                                                                                                                                                                                                                                                                               
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNiwwIDEyLDQgOCwwICIvPjwvc3ZnPg==);
+            background-size:24px 4px;
+            border:solid 1px #555;  
+            color:#fff !important;
+        } 
+        
+        #ps_pilot form button { 
+            background:#E82A89;
+            margin-top:30px;
+        } 
+        
+        #ps_pilot .large-4 {
+            text-align:center;
+        } 
+        
+        #ps_pilot .large-8 {
+            display:none;
+        }  
+        
+        #ps_pilot form {
+            margin:0 auto;
+        }
+        
+        @media only screen and (min-width: 1024px) {  
+            #ps_pilot .large-4{text-align:left;width:33.33333%;}
+            #ps_pilot .large-8{display:block;padding:0 .9375rem !important;width:66.66667%;}
+            #ps_pilot .large-3.columns{width:25%;}
+        }
+    
+    </style>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="ps_pro_qty_modal">
+<div class="column-control section">
+<div class="container column-control-container ">
+<div class="row column-control--wide">
+<div class="large-5 columns column_qty large-push-7">
+<h3>Ready to skill up<br>your entire team?</h3>
+<div class="qty-selector">
+<div class="qty-down"><i class="icons" icon="down-arrow"></i></div>
+<div class="qty-display">
+<div class="qty-display-number">10</div>
+<div class="qty-display-label">Licenses</div>
+</div>
+<div class="qty-up"><i class="icons" icon="up-arrow"></i></div>
+</div>
+<div class="qty-sales-message hidden">Need more licenses? <a href="https://www.pluralsight.com/business/contact-sales">Contact sales</a>.</div>
+<a class="button button--gradient button--small biz_qty_checkout pilot-hide" data-aa-title="pro-qty-modal-signup" href="https://www.pluralsight.com/buy?sku=PROFESSIONAL-SG&quantity=10">Continue to checkout</a>
+<a class="button button--gradient button--small biz_qty_checkout pilot-show" data-aa-title="pro-qty-modal-trial" href="https://www.pluralsight.com/buy?sku=PROFESSIONAL-SG-PILOT&quantity=10">Continue to checkout</a>
+<div class="ps_pro_qty_modal-cancel">Cancel</div>
+</div>
+<div class="large-7 columns column_feature large-pull-5">
+<h3 class="pilot-hide">With your Pluralsight plan, you can:</h3>
+<h3 class="pilot-show">With your 14-day pilot, you can:</h3>
+<ul>
+<li class="pilot-hide">Access thousands of videos to develop critical skills</li>
+<li class="pilot-show">Give up to 10 users access to thousands of video courses</li>
+<li>Practice and apply skills with interactive courses and projects</li>
+<li>See skills, usage, and trend data for your teams</li>
+<li>Prepare for certifications with industry-leading practice exams</li>
+<li>Measure proficiency across skills and roles</li>
+<li>Align learning to your goals with paths and channels</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<noindex>
+<footer id="ftr">
+<div class="ftr-row">
+<div class="ftr-container">
+<div class="ftr-cat-links-col">
+<div class="ftr-dd">╲╱</div>
+<div class="ftr-cat-header">Solutions</div>
+<div class="ftr-cat-links">
+<a href="https://www.pluralsight.com/learn">Personal</a>
+<a href="https://www.pluralsight.com/business/teams">Team</a>
+<a href="https://www.pluralsight.com/business">Enterprise</a>
+<a href="https://www.pluralsight.com/gift-of-pluralsight">Gift of Pluralsight</a>
+<a href="https://www.pluralsight.com/pricing">Pricing</a>
+</div>
+</div>
+<div class="ftr-cat-links-col">
+<div class="ftr-dd">╲╱</div>
+<div class="ftr-cat-header">Platform</div>
+<div class="ftr-cat-links">
+<a href="https://www.pluralsight.com/browse">Browse library</a>
+<a href="https://www.pluralsight.com/product/role-iq">Role IQ</a>
+<a href="https://www.pluralsight.com/product/skill-iq">Skill IQ</a>
+<a href="https://www.pluralsight.com/product/iris">Iris</a>
+<a href="https://www.pluralsight.com/authors">Authors</a>
+<a href="https://www.pluralsight.com/product/professional-services">Professional Services</a>
+<a href="https://www.pluralsight.com/tech-index">Technology Index</a>
+</div>
+</div>
+<div class="ftr-cat-links-col">
+<div class="ftr-dd">╲╱</div>
+<div class="ftr-cat-header">Company</div>
+<div class="ftr-cat-links">
+<a href="https://www.pluralsight.com/about">About us</a>
+<a href="https://www.pluralsight.com/customer-stories">Customer stories</a>
+<a href="https://investors.pluralsight.com">Investors</a>
+<a href="https://www.pluralsight.com/careers">Careers - <span>We're hiring!</span></a>
+<a href="https://www.pluralsight.com/blog">Blog</a>
+<a href="https://www.pluralsight.com/newsroom">Newsroom</a>
+<a href="https://www.pluralsight.com/resource-center">Resource center</a>
+<a href="https://www.pluralsight.com/guides">Guides</a>
+</div>
+</div>
+<div class="ftr-cat-links-col">
+<div class="ftr-dd">╲╱</div>
+<div class="ftr-cat-header">Resources</div>
+<div class="ftr-cat-links">
+<a href="https://www.pluralsight.com/downloads">Download Pluralsight</a>
+<a href="https://www.pluralsight.com/events">Events</a>
+<a href="https://www.pluralsight.com/teach">Teach</a>
+<a href="https://www.pluralsight.com/partners">Partners</a>
+<a href="https://www.pluralsight.com/affiliate">Affiliate program</a>
+<a href="https://www.pluralsightone.org">PluralsightOne.org</a>
+<a href="https://www.pluralsight.com/subscribe">Subscribe</a>
+</div>
+</div>
+<div class="ftr-cat-links-col">
+<div class="ftr-dd">╲╱</div>
+<div class="ftr-cat-header">Support</div>
+<div class="ftr-cat-links">
+<a href="https://www.pluralsight.com/contact">Contact</a>
+<a href="http://help.pluralsight.com/help">Help center</a>
+<a href="https://help.pluralsight.com/help/ip-whitelist">IP whitelist</a>
+<a href="https://www.pluralsight.com/sitemap.xml">Sitemap</a>
+</div>
+</div>
+<div class="ftr-cat-links-col show-for-medium-only">
+<div class="ftr-cat-header">
+<a href="https://www.facebook.com/pluralsight" class="share__link face-icon" target="_blank" alt="Like on Facebook"></a>
+<a href="https://www.instagram.com/pluralsight" class="share__link insta-icon" target="_blank" alt="Follow on Instagram"></a>
+<a href="https://www.twitter.com/pluralsight" class="share__link tweet-icon" target="_blank" alt="Follow on Twitter"></a>
+<a href="https://www.linkedin.com/company/pluralsight" class="share__link linkedin-icon" target="_blank" alt="Connect on LinkedIn"></a>
+<a href="https://www.youtube.com/user/pluralsight" class="share__link youtube-icon" target="_blank" alt="Follow us on YouTube"></a>
+</div>
+</div>
+<div class="ftr-cat-links-col ftr-col-last">
+<div class="ftr-btm ftr-copyright"><a href="https://www.pluralsight.com/"><img data-cfsrc="//www.pluralsight.com/content/dam/pluralsight2/general/icons/light/ps-icon.png" style="display:none;visibility:hidden;"><noscript><img src="//www.pluralsight.com/content/dam/pluralsight2/general/icons/light/ps-icon.png"></noscript></a><span class="ftr-copyright">Copyright &copy; 2004 - <span class="copyright-year"></span> Pluralsight LLC. All rights reserved</span></div>
+<div class="ftr-btm ftr-terms">
+<span>
+<a href="https://www.pluralsight.com/terms">Terms of Use</a>
+</span>
+<span>
+<a href="https://www.pluralsight.com/privacy">Privacy Policy</a>
+</span>
+<span class="hide-for-medium-only">
+<a href="https://www.facebook.com/pluralsight" class="share__link face-icon" target="_blank" alt="Like on Facebook"></a>
+<a href="https://www.instagram.com/pluralsight" class="share__link insta-icon" target="_blank" alt="Follow on Instagram"></a>
+<a href="https://www.twitter.com/pluralsight" class="share__link tweet-icon" target="_blank" alt="Follow on Twitter"></a>
+<a href="https://www.linkedin.com/company/pluralsight" class="share__link linkedin-icon" target="_blank" alt="Connect on LinkedIn"></a>
+<a href="https://www.youtube.com/user/pluralsight" class="share__link youtube-icon" target="_blank" alt="Follow us on YouTube"></a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</noindex>
+<script type="text/javascript" src="/etc/clientlibs/pluralsight/uber.min.69068b4258426e5f010a6d0223dfe916.js" defer></script>
+<script type="text/javascript">
+        //DEMANDBASE FULL LIBRARIES
+        if (document.cookie.indexOf("ps_trk=1") > -1){
+          loadRemoteScript(
+            'scripts.demandbase.com/LrYAV7hU.min.js',
+            'text/javascript',
+            1,
+            'demandbase_js_secondary_libs',
+            function() {
+              window.dbReady = true;
+              var newEvent = new CustomEvent( "PS.dbReady", { bubbles: true, cancelable: false});
+              document.querySelector('body').dispatchEvent(newEvent);
+            }
+          );
+        }
+    </script>
+</div>
+</div>
+<div class="cookie_notification options" style="display:none;">
+<p class="cookie_notification--text">We use cookies to make interactions with our websites and services easy and meaningful. For more information about the cookies we use or to find out how you can disable cookies, <a href="https://www.pluralsight.com/privacy" target="_blank">click here</a>.</p>
+<div class="cookie_notification--options">
+<a class="button button--secondary button--tiny cookie_notification--opt_in" href="#">Accept cookies and close this message</a>
+<a class="cookie_notification--opt_out" href="#">Disable cookies</a>
+</div>
+</div>
+<div class="cookie_notification opted_out" style="display:none;">
+<p class="cookie_notification--text">You have disabled cookies and are browsing in private mode. For the best possible experience on our website, please accept cookies. For additional details please read our <a href="https://www.pluralsight.com/privacy" target="_blank">privacy policy</a>.</p>
+<a class="cookie_notification--opt_in text-only" href="#">Accept cookies and close this message</a>
+</div>
+<script data-cfasync="false">
+-1==document.cookie.indexOf("ps_optout")&&-1==document.URL.indexOf("noCookieBanner=true")?jQuery(".cookie_notification.options").slideDown():-1<document.cookie.indexOf("ps_optout=1")&&jQuery(".cookie_notification.opted_out").slideDown(),jQuery(".cookie_notification--opt_in").click(function(o){o.preventDefault();var t=new Date(Date.now()+31536e6);document.cookie="ps_optout=0; expires="+t.toUTCString()+"; path=/"+(-1<document.URL.indexOf("pluralsight.com")?"; domain=pluralsight.com":""),jQuery(".cookie_notification").slideUp()}),jQuery(".cookie_notification--opt_out").click(function(o){o.preventDefault();for(var t=document.cookie.split("; "),e=0;e<t.length;e++)for(var i=window.location.hostname.split(".");0<i.length;){var n=encodeURIComponent(t[e].split(";")[0].split("=")[0])+"=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain="+i.join(".")+" ;path=",c=location.pathname.split("/");for(document.cookie=n+"/";0<c.length;)document.cookie=n+c.join("/"),c.pop();i.shift()}var a=new Date(Date.now()+31536e6);document.cookie="ps_optout=1; expires="+a.toUTCString()+"; path=/"+(-1<document.URL.indexOf("pluralsight.com")?"; domain=pluralsight.com":""),window.location.reload()});
+</script>
+</body>
+</html>
