@@ -13,3 +13,6 @@ s.on('data', function(chunk){
 s.on('end', function(){
     console.log(">>>Done>>>");
 });
+
+
+request('http://pluralsight.com/').pipe(process.stdout);
