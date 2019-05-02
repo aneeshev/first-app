@@ -14,5 +14,5 @@ s.on('end', function(){
     console.log(">>>Done>>>");
 });
 
-
+//using pipe() concept.
 request('http://pluralsight.com/').pipe(process.stdout);
